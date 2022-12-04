@@ -7,7 +7,7 @@ const Users = (props) => {
     const linksStyles = { textDecoration: "auto" };
     //users and we can show user details on Click
     const usersRender = <ul>
-        <li><Link to={"/administration/users/1?userName=houssem"} style={linksStyles}>Houssem Mighri</Link></li>
+        <li><Link to={"/administration/users/1"} style={linksStyles}>Houssem Mighri</Link></li>
         <li><Link to={"/administration/users/2"} style={linksStyles}>Salah MED </Link></li>
     </ul>;
 
