@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import '../styles/cart.scss'
 import cartSlice from '../data/cartSlice';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -43,6 +44,14 @@ const Cart = () => {
 
   return (
     <div className="cart">
+      <div>
+        <button
+          className="btn btn-primary"
+        >
+          <i className="bi bi-trash-fill" />
+          <Link to={"/"}>Back</Link>
+        </button>
+      </div>
       {
         productIds?.length ?
           <div className="cart-product">

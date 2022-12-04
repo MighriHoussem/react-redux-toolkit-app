@@ -9,6 +9,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
+      <NavLink to="/administration" title="cart" className={({ isActive }) => `${isActive && 'selected'} admin-navbar-link`}>
+        Administration
+      </NavLink>
       <NavLink to="/" end>
         <i className="bi bi-shop-window" />
       </NavLink>
