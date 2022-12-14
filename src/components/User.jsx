@@ -1,5 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 
+import useCurrentUser from "../customHooks/useCurrentUser";
+
 
 //static list of users 
 const users = [
@@ -16,6 +18,8 @@ const User = (props) => {
 
     console.log('User params => ', params);
 
+    //here we use our customHook useCurrentUser
+    const currentUser = useCurrentUser();
 
     //handle back to Home Button
     const handleHomePage = () => {
@@ -39,6 +43,10 @@ const User = (props) => {
                 back to Home Page
             </button>
             {userRender}
+            <div style={{ marginTop: "25px" }}>
+                <label>Current user is:{" "}</label>
+                {currentUser}
+            </div>
         </>
     )
 }
